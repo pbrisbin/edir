@@ -6,11 +6,11 @@ require 'edir/version'
 Gem::Specification.new do |spec|
   spec.name          = "edir"
   spec.version       = Edir::VERSION
-  spec.authors       = ["TODO: Write your name"]
-  spec.email         = ["TODO: Write your email address"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.authors       = ["Patrick Brisbin"]
+  spec.email         = ["pbrisbin@gmail.com"]
+  spec.description   = %q{Edit a directory}
+  spec.summary       = %q{Edit a directory listing in your $EDITOR and have those changes reflected in the file system}
+  spec.homepage      = "https://github.com/pbrisbin/edir"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
