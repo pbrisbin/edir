@@ -1,29 +1,46 @@
 # Edir
 
-TODO: Write a gem description
+Easily "edit" a directory in your editor.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'edir'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install edir
+~~~
+$ git clone ...
+$ bundle
+$ rake install
+~~~
 
 ## Usage
 
-TODO: Write usage instructions here
+~~~
+$ edir
+~~~
 
-## Contributing
+Presents an `ls` listing of the current directory in your `$EDITOR`. You 
+can then edit this listing to what you want the directory contents to 
+look like and save. Then, `edir` will use the differences to make those 
+changes.
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+* Remove lines and those files will be deleted
+* Change a line's filename to rename that file
+* Duplicate a line and change its name to copy that file
+
+## WARNING
+
+This is a **prototype**. I take no responsibility if it deletes files 
+unexpectedly.
+
+## Existing tools
+
+I'm pretty sure there are already editor-specific plugins that do this 
+and then some. Vim's own file explore has a few commands to manipulate 
+the file under cursor. However, I'm not sure of anything that provides 
+this functionality in an editor-agnostic way. Regardless, it was (and 
+is) fun to hack on.
+
+## Upcoming
+
+* Options like `--dry-run`, `--verbose`, etc
+* Ability to pass additional options to the `ls` command
+* See edits to permissions and ownership fields and execute the proper 
+  `chmod` or `chown` commands
