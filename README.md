@@ -40,7 +40,6 @@ is) fun to hack on.
 
 ## Upcoming
 
-* Options like `--dry-run`, `--verbose`, etc
 * Ability to pass additional options to the `ls` command
 * See edits to permissions and ownership fields and execute the proper 
   `chmod` or `chown` commands
